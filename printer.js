@@ -54,7 +54,7 @@ Printer.prototype.printaj = function(stranice)
     {
         this.nivo_tonera -= stranice*0.2;
         ukupanBrojStranica += stranice;
-        if((stranice*0.5)%2 == 0)
+        if(stranice%2 == 0)
         {
             ukupanBrojListova += parseInt(stranice*0.5);
         }
