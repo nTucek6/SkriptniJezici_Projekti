@@ -9,9 +9,7 @@ _lib.prototype.ubaciElement = function(naziv,klasa,indentifikator,tekst)
     for(var i = 0;i<this.el.length;i++)
 {
     var newElement = document.createElement(naziv);
-   
-
-
+     
 if(klasa.length > 0)
 {
     newElement.setAttribute("class",klasa);
