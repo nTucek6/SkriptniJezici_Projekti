@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div>
+
+<label>Naziv predmeta</label>
+<input type="text" id="predmet"> <br>
+<label>Godina</label>
+<input type="text" id="godina"> <br>
+<label>Broj ECTS bodova</label>
+<input type="text" id="ects"> <br>
+<button onclick="GetInfo()">Press</button>
+</div>
+
+<div style="margin-top: 50px;">
+<input type="text" id="SearchValue" onkeyup="Search()">
+<table id="addInfo">
+    <thead>
+        <tr>
+            <th>Naziv predmeta</th>
+            <th>Godina</th>
+            <th>Broj ECTS bodova</th>
+            <th>Brisanje retka</th>
+            <th>Change color</th>
+          </tr>
+    </thead>
+    
+   
+  </table>
+</div>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
