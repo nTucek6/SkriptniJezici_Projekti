@@ -1,0 +1,27 @@
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+   padding: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+
+#sorter
+{
+    display: inline-block;
+    border: solid white 1px;
+    padding: 50px;
+    margin-left: 45vw;
+    list-style-type: none;
+}
+li
+{
+    border: solid white 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

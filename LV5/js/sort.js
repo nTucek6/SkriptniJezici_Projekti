@@ -1,0 +1,2 @@
+$(function() {  
+$( "#sorter" ).sortable();}); 
