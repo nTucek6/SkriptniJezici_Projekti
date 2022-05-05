@@ -32,9 +32,9 @@ function Spremi()
 {
     var podatak = $("#send").val();
     var tip = $("#odabir").val();
-    var data = {tip:podatak}
+    //var data = {tip:podatak}
 
-   var jsonData = JSON.stringify(data); //tip+":"+podatak
+   var jsonData = JSON.stringify(tip+":"+podatak); //
 
     download(jsonData, 'podatak.json', 'text/json');
 
