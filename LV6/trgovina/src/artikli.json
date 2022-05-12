@@ -1,0 +1,43 @@
+[
+{
+"Id":1,
+"Naziv":"Redmi Note ",
+"Proizvodac":"Xiaomi",
+"Model":"10 Pro",
+"Cijena":"2199.99",
+"Kolicina":0
+},
+{
+"Id":2,
+"Naziv":"Ryzen",
+"Proizvodac":"Amd",
+"Model":"7 2600x",
+"Cijena":"2399.99",
+"Kolicina":6
+},
+{
+"Id":3,
+"Naziv":"i5",
+"Proizvodac":"Intel",
+"Model":"7400",
+"Cijena":"1200.00",
+"Kolicina":2
+},
+{
+ "Id":4,
+ "Naziv":"rtx",
+ "Proizvodac":"Nvidia",
+ "Model":"3090 Ti",
+ "Cijena":"20000.00",
+ "Kolicina":"2"
+ },
+ {
+    "Id":5,
+    "Naziv":"Evo",
+    "Proizvodac":"Samsung",
+    "Model":"860",
+    "Cijena":"650.00",
+    "Kolicina":10
+    }
+
+]
