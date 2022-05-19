@@ -4,7 +4,7 @@ import ArtiklObjekt from "./TrgovinaArtikl";
 function ArtiklLista()
 {
     return( 
-        <table class="table table-primary">
+        <table className="table table-primary">
         <thead>
           <tr>
             <th scope="col">Id</th>
