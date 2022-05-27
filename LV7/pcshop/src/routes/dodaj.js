@@ -11,7 +11,7 @@ export default function UcitajArtikl()
     return (
       <>
         <div className="container mt-4">
-        <input type="text" value={input} onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}/>
+        <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
         <table className="table table-striped">
             <thead>
               <tr>

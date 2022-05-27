@@ -11,7 +11,7 @@ export default function GetData(unos)
     const [artikli, setData] = useState(null);
     useEffect(() => {
         UcitajPodatke();
-        }, []);
+        });
         function UcitajPodatke()
         {
             axios.get(readUrl).then((response) => {
@@ -19,7 +19,7 @@ export default function GetData(unos)
                 });
         }
 
-
+        if(!artikli) return null
 
         const filterList = artikli.filter((o) =>
         {
@@ -29,7 +29,8 @@ export default function GetData(unos)
             }
             else
             {
-                return o.Proizvodac.toLowerCase().includes(unos.input) || o.Naziv.toLowerCase().includes(unos.input)|| o.Model.toLowerCase().includes(unos.input);
+                const searchData = unos.input.toLocaleLowerCase()
+                return o.Proizvodac.toLowerCase().includes(searchData) || o.Naziv.toLowerCase().includes(searchData)|| o.Model.toLowerCase().includes(searchData);
             }
         }
         )
