@@ -1,12 +1,13 @@
 import axios from "axios";
 import {useState, useEffect} from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+import React, { useRef } from "react";
 
-export default function GetData()
+export default function GetData(unos)
 {
-    
-     const readUrl = "http://localhost/skritpni/SkriptniJezici_Projekti/LV7/pcshop/read.php";
+    //const readUrl = "http://localhost/skritpni/SkriptniJezici_Projekti/LV7/pcshop/read.php";
+    const readUrl = "http://localhost/SkriptniJezici_Projekti/LV7/pcshop/read.php"
     const [artikli, setData] = useState(null);
     useEffect(() => {
         UcitajPodatke();
@@ -17,8 +18,23 @@ export default function GetData()
                 setData(response.data);
                 });
         }
-        if (!artikli) return null;
-        const list = artikli.map((artikl) => (
+
+
+
+        const filterList = artikli.filter((o) =>
+        {
+            if(unos.input === '')
+            {
+                return o;
+            }
+            else
+            {
+                return o.Proizvodac.toLowerCase().includes(unos.input) || o.Naziv.toLowerCase().includes(unos.input)|| o.Model.toLowerCase().includes(unos.input);
+            }
+        }
+        )
+
+        const list = filterList.map((artikl) => (
             <tr key={artikl.Id.toString()}>
                 <td>{artikl.Id}</td>
                 <td>{artikl.Proizvodac}</td>
@@ -36,7 +52,8 @@ export default function GetData()
 {
     if(window.confirm("Are you sure?"))
     { 
-    const readUrl = "http://localhost/skritpni/SkriptniJezici_Projekti/LV7/pcshop/query.php";
+    const readUrl = "http://localhost/SkriptniJezici_Projekti/LV7/pcshop/query.php"
+    //const readUrl = "http://localhost/skritpni/SkriptniJezici_Projekti/LV7/pcshop/query.php";
     axios({
       method: "post",url: readUrl,data: {"Id":pars,"queryType":"Obrisi"},headers: { "Content-Type": "multipart/form-data" },})
       .then(function (response) {console.log(response);})

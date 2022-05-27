@@ -10,7 +10,7 @@ export default function Add()
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
-        const readUrl = "http://localhost/skritpni/SkriptniJezici_Projekti/LV7/pcshop/query.php";
+        const readUrl = "http://localhost/SkriptniJezici_Projekti/LV7/pcshop/query.php";
         axios({
             method: "post",
             url: readUrl,

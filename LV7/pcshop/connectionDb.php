@@ -9,7 +9,7 @@ $password = "";
 try
 {
 $oConnection = new PDO("mysql:host=$host;dbname=$dbName", $username, $password);
-//echo "Connected to $dbName at $oConnection->host successfully.";
+//echo "Connected to $dbName at $host successfully.";
 }
 catch (PDOException $pe)
 {

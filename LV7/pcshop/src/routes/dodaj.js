@@ -2,20 +2,16 @@ import GetData from "../js/UcitajPHP"
 //import axios from "axios";
 import {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
+import SearchTable from "../js/SearchTable";
+import React, { useRef } from "react";
 export default function UcitajArtikl()
 {
-  let list = <GetData />;
-  //console.log(list);
-  const handleChange = (event) => 
-  {
-  //list = <GetData />;
-
-
-  } 
-
+ const [input,setInput] = useState("");
+// <form><SearchTable/></form>
     return (
+      <>
         <div className="container mt-4">
-        <input type="text" onChange={handleChange}/>
+        <input type="text" value={input} onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}/>
         <table className="table table-striped">
             <thead>
               <tr>
@@ -29,17 +25,15 @@ export default function UcitajArtikl()
                 <th scope="col">Obriši</th>
               </tr>
             </thead>
-            <tbody>
-              {list}
+            <tbody id="tableData">
+              <GetData input={input} />
             </tbody>
           </table>
           </div>
+          </>
     )
 }
 
 
-export function TextBoxValue(value)
-{
 
-}
 
