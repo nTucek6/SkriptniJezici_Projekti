@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function Add()
 { 
+   
     const [inputs, setInputs] = useState({}); 
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        const readUrl = "http://localhost/LV7/pcshop/query.php";
+        const readUrl = "http://localhost/skritpni/SkriptniJezici_Projekti/LV7/pcshop/query.php";
         axios({
             method: "post",
             url: readUrl,
@@ -20,7 +20,8 @@ export default function Add()
                 "naziv": inputs.naziv,
                 "model":inputs.model,
                 "kolicina":inputs.kolicina,
-                "cijena":inputs.cijena
+                "cijena":inputs.cijena,
+                "queryType":"Dodaj"
             },
             headers: { "Content-Type": "multipart/form-data" },
           })

@@ -1,11 +1,21 @@
-//import axios from "axios";
-//import {useState, useEffect} from 'react';
 import GetData from "../js/UcitajPHP"
-//import Add from "../js/DodajArtikl";
-function UcitajArtikl()
+//import axios from "axios";
+import {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
+export default function UcitajArtikl()
 {
+  let list = <GetData />;
+  //console.log(list);
+  const handleChange = (event) => 
+  {
+  //list = <GetData />;
+
+
+  } 
+
     return (
-        <div className="container ">
+        <div className="container mt-4">
+        <input type="text" onChange={handleChange}/>
         <table className="table table-striped">
             <thead>
               <tr>
@@ -15,13 +25,21 @@ function UcitajArtikl()
                 <th scope="col">Model</th>
                 <th scope="col">Cijena</th>
                 <th scope="col">Količina</th>
+                <th scope="col">Uredi</th>
+                <th scope="col">Obriši</th>
               </tr>
             </thead>
             <tbody>
-            <GetData />
+              {list}
             </tbody>
           </table>
           </div>
     )
 }
-export default UcitajArtikl;
+
+
+export function TextBoxValue(value)
+{
+
+}
+

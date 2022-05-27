@@ -5,7 +5,8 @@ import App from './App';
 //import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import UcitajArtikl from "./routes/dodaj.js";
-import Add from "./js/DodajArtikl"
+import Add from "./js/DodajArtikl";
+import EditForm from "./js/UpdateArtikl";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -19,6 +20,7 @@ root.render(
   <Route path="/" element={<App />} >
   <Route path="pocetna" element={<UcitajArtikl />} />
   <Route path="dodaj" element={<Add />} />
+  <Route path="/Edit/:EditId" element={<EditForm />} />
   <Route path="/" element={<Navigate to="/pocetna" />} />
   </Route>
   </Routes>
